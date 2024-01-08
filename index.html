@@ -10,30 +10,46 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
-            color: #333;
+            background-color: #1f1f1f;
+            color: #fff;
         }
 
         header {
-            background-color: #222;
+            background-color: #121212;
             color: #fff;
             text-align: center;
-            padding: 1rem;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2em;
+            font-size: 1.5em;
         }
 
-        header p {
-            margin: 0;
+        header nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 1.5rem;
             font-size: 1.2em;
+            transition: color 0.3s ease-in-out;
+        }
+
+        header nav a:hover {
+            color: #ff3366;
         }
 
         section.hero {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 8rem 2rem;
             background-color: #333;
             color: #fff;
         }
@@ -67,13 +83,14 @@
 
         section.features {
             text-align: center;
-            padding: 4rem 2rem;
-            background-color: #fff;
+            padding: 6rem 2rem;
+            background-color: #1f1f1f;
         }
 
         section.features h2 {
             margin-bottom: 1.5rem;
             font-size: 2em;
+            color: #fff;
         }
 
         section.features ul {
@@ -90,7 +107,7 @@
 
         section.signup {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 6rem 2rem;
             background-color: #ff3366;
             color: #fff;
         }
@@ -143,8 +160,10 @@
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: #222;
+            background-color: #121212;
             color: #fff;
+            position: relative;
+            margin-top: 4rem;
         }
 
     </style>
@@ -153,10 +172,14 @@
 <body>
     <header>
         <h1>Pulsarfy</h1>
-        <p>Stream Your Vibes</p>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#features">Features</a>
+            <a href="/stream/redir.html">Home</a>
+        </nav>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <h2>Welcome to Pulsarfy</h2>
         <p>Experience a new dimension of streaming with Pulsarfy. Dive into a world of unlimited entertainment and
             discover your favorite content.</p>
@@ -164,24 +187,17 @@
     </section>
 
     <section id="features" class="features">
-        <h2>Key Features</h2>
+        <h2>Why we're better</h2>
         <ul>
-            <li>Curated Playlists</li>
+            <li>Completely free</li>
             <li>High-Quality Streaming</li>
-            <li>Personalized Recommendations</li>
-            <li>Offline Mode</li>
-            <li>Ad-Free Experience</li>
+            <li>Ad-free experience</li>
         </ul>
     </section>
 
     <section id="signup" class="signup">
         <h2>Sign Up for Pulsarfy</h2>
-        <form action="signup.php" method="post">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit" class="cta-button">Get Started</button>
+        <p>The best part about Pulsarfy is that you don't need to sign up.</p>
         </form>
     </section>
 
