@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulsarfy Streaming</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #141414;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .item {
+      margin: 10px;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 5px;
+      width: 200px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .item:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pulsarfy Streaming</h1>
+  </header>
+
+  <div class="content">
+    <div class="item" onclick="redirectToLink('https://example.com/show1')">
+      <h2>Show 1</h2>
+      <img src="show1.jpg" alt="Show 1">
+    </div>
+
+    <div class="item" onclick="redirectToLink('https://example.com/movie1')">
+      <h2>Movie 1</h2>
+      <img src="movie1.jpg" alt="Movie 1">
+    </div>
+
+    <!-- Add more items as needed -->
+
+  </div>
+
+  <script>
+    function redirectToLink(link) {
+      window.location.href = link;
+    }
+  </script>
+</body>
+</html>
 
